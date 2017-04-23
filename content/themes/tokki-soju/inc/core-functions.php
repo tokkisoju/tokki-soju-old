@@ -69,3 +69,21 @@ function _ts_custom_image_sizes() {
   add_image_size( 'hero', 1600, 640, true );
 }
 add_action( 'init', '_ts_custom_image_sizes' );
+
+/*
+Force category & postname permalink structure
+ */
+function _ts_custom_permalinks() {
+  global $wp_rewrite;
+  $wp_rewrite->set_permalink_structure( '/%postname%/' );
+}
+add_action( 'init', '_ts_custom_permalinks' );
+
+/*
+Add ACF options page
+ */
+if ( function_exists( 'acf_add_options_page' ) ) {
+  acf_add_options_page();
+  acf_add_options_sub_page( 'Header' );
+  acf_add_options_sub_page( 'Footer' );
+}
