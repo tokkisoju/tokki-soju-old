@@ -1,0 +1,35 @@
+<div class="comment-form">
+  <h3>Leave a comment</h3>
+
+  <form id="form" class="comment-form" method="post" action="{{ site.url~'/wp-comments-post.php' }}">
+    {% if user %}
+      <input class="input" type="hidden" name="email" value="{{ user.email }}">
+      <input class="input" type="hidden" name="author" value="{{ user.name }}">
+      <input class="input" type="hidden" name="url" value="{{ user.link }}">
+    {% else %}
+      <div>
+        <label class="label" for="email">Email</label>
+        <input class="input" required name="email" type="text" id="email"/>
+
+        <label class="label" for="author">Name</label>
+        <input class="input" required name="author" type="text" id="author"/>
+
+        <label class="label" for="url">Website</label>
+        <input class="input" name="url" id="url" type="text"/>
+      </div>
+    {% endif %}
+
+    <div>
+      <label class="label" for="comment">Comment</label>
+      <textarea class="textarea" placeholder="" name="comment" cols="60" rows="3" id="comment"></textarea>
+    </div>
+
+    <input class="input" name="comment_post_ID" value="{{ post.id }}" id="comment_post_ID" type="hidden">
+    <input class="input" name="comment_parent" id="comment_parent" value="{{ comment.ID|default('0') }}" type="hidden">
+
+    <div>
+      <button type="submit" name="Submit" class="btn btn-primary">Submit</button>
+      <button type="reset" class="btn btn-outline">Cancel</button>
+    </div>
+  </form>
+</div>

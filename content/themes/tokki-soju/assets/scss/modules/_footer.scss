@@ -1,0 +1,20 @@
+/**
+ * _footer.scss
+ */
+
+/*
+Footer
+ */
+.footer-area {}
+
+/*
+Sticky Footer
+ */
+.body-inner {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.content-area {
+  flex: 1 1 auto;
+}

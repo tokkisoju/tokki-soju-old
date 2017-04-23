@@ -1,0 +1,32 @@
+{
+  "name": "seankmchenry/tokki-soju",
+  "description": "WordPress theme for TOKKI Soju site",
+  "type":"wordpress-theme",
+  "minimum-stability" : "stable",
+  "authors": [
+    {
+      "name": "seankmchenry",
+      "email": "seankmchenry@gmail.com"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+  ],
+  "extra": {
+  	"installer-paths": {
+      "../../plugins/{$name}/": [
+        "wpackagist-plugin/*",
+        "type:wordpress-plugin"
+      ]
+  	}
+	},
+  "require": {
+	  "wpackagist-plugin/timber-library": "0.22.*",
+    "jjgrainger/posttypes": "^1.0",
+    "tgmpa/tgm-plugin-activation": "^2.6",
+    "roots/soil": "3.7.1"
+  }
+}
