@@ -79,6 +79,6 @@ function _ts_scripts() {
   wp_enqueue_script( 'ts-scripts' );
 
   /* Modernizr */
-  wp_enqueue_script( 'ts-modernizr', get_template_directory_uri() . '/assets/js/vendor/modernizr-custom.js', array(), '3.4.0', false );
+  wp_enqueue_script( 'ts-modernizr', get_template_directory_uri() . '/assets/js/vendor-js/modernizr-custom.js', array(), '3.4.0', false );
 }
 add_action( 'wp_enqueue_scripts', '_ts_scripts' );
