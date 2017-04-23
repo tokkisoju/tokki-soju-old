@@ -44,22 +44,28 @@ function _ts_register_required_plugins() {
    */
   $plugins_remote = array(
     array(
+      'name' => 'Google XML Sitemaps',
+      'slug' => 'google-sitemap-generator',
+      'required' => true,
+      'force_activation' => true
+    ),     
+    array(
       'name' => 'Login Security Solution',
       'slug' => 'login-security-solution',
       'required' => true,
       'force_activation' => true
     ),
     array(
-      'name' => 'WP Super Cache',
-      'slug' => 'wp-super-cache',
-      'required' => true,
-      'force_activation' => false
-    ),
-    array(
-      'name' => 'Yoast SEO',
-      'slug' => 'wordpress-seo',
+      'name' => 'The SEO Framework',
+      'slug' => 'autodescription',
       'required' => true,
       'force_activation' => true
+    ),    
+    array(
+      'name' => 'W3 Total Cache',
+      'slug' => 'w3-total-cache',
+      'required' => true,
+      'force_activation' => false
     )
   );
 

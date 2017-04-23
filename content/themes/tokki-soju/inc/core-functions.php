@@ -12,12 +12,13 @@ function _ts_flush_rewrite_rules() {
 add_action( 'after_switch_theme', '_ts_flush_rewrite_rules' );
 
 /*
-Yoast SEO meta box priority
+Force category & postname permalink structure
  */
-function _ts_move_yoast_seo_meta() {
-  return 'low';
+function _ts_custom_permalinks() {
+  global $wp_rewrite;
+  $wp_rewrite->set_permalink_structure( '/%postname%/' );
 }
-add_filter( 'wpseo_metabox_prio', '_ts_move_yoast_seo_meta' );
+add_action( 'init', '_ts_custom_permalinks' );
 
 /*
 Disable public user registration page
@@ -25,6 +26,11 @@ Disable public user registration page
 add_action( 'login_init', function() {
   add_filter( 'pre_option_users_can_register', '__return_null' );
 } );
+
+/*
+Remove SEO Framework plugin credit
+ */
+add_filter( 'the_seo_framework_indicator', '__return_false' );
 
 /*
 Remove dashboard widgets
@@ -69,15 +75,6 @@ function _ts_custom_image_sizes() {
   add_image_size( 'hero', 1600, 640, true );
 }
 add_action( 'init', '_ts_custom_image_sizes' );
-
-/*
-Force category & postname permalink structure
- */
-function _ts_custom_permalinks() {
-  global $wp_rewrite;
-  $wp_rewrite->set_permalink_structure( '/%postname%/' );
-}
-add_action( 'init', '_ts_custom_permalinks' );
 
 /*
 Add ACF options page

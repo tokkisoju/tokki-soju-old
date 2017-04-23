@@ -10,7 +10,7 @@
 		<div class="body-inner">
 			<header class="header header-area">
 				{% block header %}
-					<div class="wrapper">
+					<div class="header-inner header-area__inner">
 						<h1 class="hdr-logo" role="banner">
 							<a class="hdr-logo-link" href="{{site.url}}" rel="home">{{site.name}}</a>
 						</h1>
@@ -23,13 +23,13 @@
 
 			<section id="content" role="main" class="content content-area">
 				{% if title %}<h1>{{title}}</h1>{% endif %}
-				<div class="wrapper {{sidebar_class}}">
+				<div class="content-inner content-area__inner {{sidebar_class}}">
 					{% block content %}
 						Sorry, no content
 					{% endblock %}
 				</div>
 				{% if sidebar %}
-					<aside class="layout-sidebar">
+					<aside class="sidebar sidebar-area">
 						{{sidebar}}
 					</aside>
 				{% endif %}
