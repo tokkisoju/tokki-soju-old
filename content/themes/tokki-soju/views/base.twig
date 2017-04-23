@@ -11,12 +11,23 @@
 			<header class="header header-area">
 				{% block header %}
 					<div class="header-inner header-area__inner">
-						<h1 class="hdr-logo" role="banner">
-							<a class="hdr-logo-link" href="{{site.url}}" rel="home">{{site.name}}</a>
-						</h1>
-						<nav id="nav-main" class="nav-main" role="navigation">
-							{% include "menu.twig" with {'menu': menu.get_items} %}
-						</nav><!-- #nav -->
+						<div class="container">
+							<div class="row middle-xs">
+
+								<div class="col-xs-4 col-md-3">
+									<h1 class="hdr-logo m0" role="banner">
+										<a class="hdr-logo-link" href="{{site.url}}" rel="home">{{site.name}}</a>
+									</h1>
+								</div>
+
+								<div class="col-xs-8 col-md-9">
+									<nav id="nav-main" class="nav-main right-align" role="navigation">
+										{% include "menu.twig" with {'menu': menu.get_items} %}
+									</nav><!-- #nav -->
+								</div>
+
+							</div><!-- .row -->
+						</div><!-- .container -->
 					</div>
 				{% endblock %}
 			</header>
