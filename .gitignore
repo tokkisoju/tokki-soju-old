@@ -1,47 +1,34 @@
-# Include your project-specific ignores in this file
-# Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
-
 # Junk files
 .DS_Store
 Desktop.ini
 Thumbs.db
 
-# .htaccess file
+# Config files
+.env
 .htaccess
+
+# Composer folders
+packages/
 
 # Log files
 debug.log
 npm-debug.log
 
-# Config files
-dev-config.php
-prd-config.php
 
-# WordPress source
+# WordPress folders
 wp/
-
-# Plugins folder
 content/plugins/*
 !content/plugins/index.php
-
-# Upgrade folder
 content/upgrade
-
-# Uploads folder
 content/uploads/*
 !content/uploads/index.php
 
-# Composer
-packages/
-
-# Node modules
+# NPM folder
 node_modules
 
-# Compiled CSS
+# Main scripts/styles
 main.css
 main.min.css
 main.min.css.map
-
-# Compiled JS
 main.js
 main.min.js

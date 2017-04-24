@@ -38,6 +38,14 @@ function _ts_register_required_plugins() {
       'force_activation' => true
     ),
     array(
+      'name' => 'Soil',
+      'slug' => 'soil',
+      'source' => 'https://github.com/roots/soil/archive/master.zip',
+      'required' => true,
+      'force_activation' => true,
+      'external_url' => 'https://github.com/roots/soil'
+    ),
+    array(
       'name' => 'Timber',
       'slug' => 'timber-library',
       'required' => true,
@@ -77,7 +85,7 @@ function _ts_register_required_plugins() {
 
   // merge the local and remote plugin
   // arrays if we're not in dev environment
-  if ( !WP_LOCAL_DEV ) {
+  if ( WP_ENV !== 'development' ) {
     $plugins = array_merge( $plugins, $plugins_remote );
   }
 

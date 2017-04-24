@@ -68,7 +68,7 @@ new StarterSite();
  * Enqueue scripts and styles.
  */
 function _ts_scripts() {
-  if ( WP_LOCAL_DEV ) {
+  if ( WP_ENV === 'development' ) {
     wp_register_style( 'ts-style', get_template_directory_uri() . '/assets/css/main.css', false, filemtime( get_stylesheet_directory() . '/assets/css/main.css' ) );
     wp_register_script( 'ts-scripts', get_template_directory_uri() . '/assets/js/main.js', array( 'jquery' ), filemtime( get_stylesheet_directory() . '/assets/js/main.js' ), true );
   } else {
