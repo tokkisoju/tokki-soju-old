@@ -4,7 +4,7 @@
   "type" : "project",
   "license" : "MIT",
   "config": {
-    "vendor-dir": "vendor"
+    "vendor-dir": "packages"
   },
   "repositories": [
     {

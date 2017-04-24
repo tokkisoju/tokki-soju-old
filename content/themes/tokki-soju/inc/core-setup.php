@@ -7,11 +7,11 @@ if ( ! class_exists( 'Timber' ) ) {
 	add_action( 'admin_notices', function() {
 		echo '<div class="error"><p>Timber not activated. Make sure you activate the plugin in <a href="' . esc_url( admin_url( 'plugins.php#timber' ) ) . '">' . esc_url( admin_url( 'plugins.php') ) . '</a></p></div>';
 	});
-	
+
 	add_filter('template_include', function($template) {
 		return get_stylesheet_directory() . '/static/no-timber.html';
 	});
-	
+
 	return;
 }
 
@@ -79,6 +79,6 @@ function _ts_scripts() {
   wp_enqueue_script( 'ts-scripts' );
 
   /* Modernizr */
-  wp_enqueue_script( 'ts-modernizr', get_template_directory_uri() . '/assets/js/vendor-js/modernizr-custom.js', array(), '3.4.0', false );
+  wp_enqueue_script( 'ts-modernizr', get_template_directory_uri() . '/assets/js/vendor/modernizr-custom.js', array(), '3.4.0', false );
 }
 add_action( 'wp_enqueue_scripts', '_ts_scripts' );

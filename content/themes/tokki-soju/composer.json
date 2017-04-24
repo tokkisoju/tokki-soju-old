@@ -3,6 +3,9 @@
   "description": "WordPress theme for TOKKI Soju site",
   "type":"wordpress-theme",
   "minimum-stability" : "stable",
+  "config": {
+    "vendor-dir": "packages"
+  },
   "authors": [
     {
       "name": "seankmchenry",

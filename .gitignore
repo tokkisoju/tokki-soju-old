@@ -32,7 +32,7 @@ content/uploads/*
 !content/uploads/index.php
 
 # Composer
-vendor/
+packages/
 
 # Node modules
 node_modules

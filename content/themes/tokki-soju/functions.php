@@ -6,7 +6,7 @@
 /*
 Composer autoload
  */
-require_once( __DIR__ . '/vendor/autoload.php' );
+require_once( __DIR__ . '/packages/autoload.php' );
 
 /*
 Core Setup

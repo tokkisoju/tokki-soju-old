@@ -16,7 +16,7 @@ function _ts_register_required_plugins() {
       'slug' => 'acf-to-rest-api',
       'required' => true,
       'force_activation' => true
-    ),    
+    ),
     array(
       'name' => 'Advanced Custom Fields Pro',
       'slug' => 'advanced-custom-fields-pro',
@@ -36,6 +36,12 @@ function _ts_register_required_plugins() {
       'slug' => 'imsanity',
       'required' => true,
       'force_activation' => true
+    ),
+    array(
+      'name' => 'Timber',
+      'slug' => 'timber-library',
+      'required' => true,
+      'force_activation' => true
     )
   );
 
@@ -48,7 +54,7 @@ function _ts_register_required_plugins() {
       'slug' => 'google-sitemap-generator',
       'required' => true,
       'force_activation' => true
-    ),     
+    ),
     array(
       'name' => 'Login Security Solution',
       'slug' => 'login-security-solution',
@@ -60,7 +66,7 @@ function _ts_register_required_plugins() {
       'slug' => 'autodescription',
       'required' => true,
       'force_activation' => true
-    ),    
+    ),
     array(
       'name' => 'W3 Total Cache',
       'slug' => 'w3-total-cache',
